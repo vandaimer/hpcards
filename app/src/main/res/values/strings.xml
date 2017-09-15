@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">DesafioHF</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="card_name">Nome do card</string>
 </resources>
