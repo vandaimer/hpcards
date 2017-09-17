@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 
@@ -26,6 +28,7 @@ public class CardListAdapter extends RecyclerView.Adapter<CardViewHolder> {
     @Override
     public void onBindViewHolder(CardViewHolder viewHolder, int i) {
        viewHolder.cardName.setText(cards.get(i).getName());
+       Picasso.with(viewHolder.cardImage.getContext()).load(cards.get(i).getImageURL()).fit().centerCrop().into(viewHolder.cardImage);
     }
 
 
