@@ -13,15 +13,18 @@ import java.util.ArrayList;
 public class CardListAdapter extends RecyclerView.Adapter<CardViewHolder> {
 
     private ArrayList<Card> cards = new ArrayList<>();
+    private  CardItemListener cardItemListener;
 
-    public CardListAdapter(ArrayList<Card> cards) {
+    public CardListAdapter(ArrayList<Card> cards, CardItemListener cardItemListener) {
         this.cards = cards;
+        this.cardItemListener = cardItemListener;
     }
 
     @Override
     public CardViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.cell_card_list, viewGroup, false);
+        v.setOnClickListener(cardItemListener);
         return new CardViewHolder(v);
     }
 
@@ -30,7 +33,6 @@ public class CardListAdapter extends RecyclerView.Adapter<CardViewHolder> {
        viewHolder.cardName.setText(cards.get(i).getName());
        Picasso.with(viewHolder.cardImage.getContext()).load(cards.get(i).getImageURL()).fit().centerCrop().into(viewHolder.cardImage);
     }
-
 
     @Override
     public int getItemCount() {
