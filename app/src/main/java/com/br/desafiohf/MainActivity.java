@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 List<Card> resp = response.body();
                 if(!resp.isEmpty()) {
                     cardsList = new ArrayList<>(resp);
-                    cardListAdapter = new CardListAdapter(cardsList);
+                    cardListAdapter = new CardListAdapter(cardsList, new CardItemListener(cardsList));
                     recyclerView.setAdapter(cardListAdapter);
                 }
             }
