@@ -1,4 +1,4 @@
-package com.br.desafiohf;
+package com.br.desafiohf.card;
 
 import java.util.Map;
 

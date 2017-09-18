@@ -1,4 +1,4 @@
-package com.br.desafiohf;
+package com.br.desafiohf.card;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
 
+import com.br.desafiohf.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.br.desafiohf;
+package com.br.desafiohf.card;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.br.desafiohf.R;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 

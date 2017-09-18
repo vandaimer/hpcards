@@ -13,6 +13,8 @@ import android.view.MenuItem;
 
 import com.br.desafiohf.HPApi.HPApiClient;
 import com.br.desafiohf.HPApi.HPApiRequest;
+import com.br.desafiohf.card.Card;
+import com.br.desafiohf.card.CardListAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

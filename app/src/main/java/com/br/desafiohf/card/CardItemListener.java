@@ -1,9 +1,10 @@
-package com.br.desafiohf;
+package com.br.desafiohf.card;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.br.desafiohf.R;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;

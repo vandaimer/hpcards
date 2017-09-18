@@ -1,6 +1,6 @@
 package com.br.desafiohf.HPApi;
 
-import com.br.desafiohf.Card;
+import com.br.desafiohf.card.Card;
 
 import java.util.List;
 
