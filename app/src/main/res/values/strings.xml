@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DesafioHF</string>
+    <string name="app_name">Harry Potter Cards</string>
     <string name="title_activity_main">Harry Potter Cards</string>
     <string name="card_name">Nome do card</string>
 
