@@ -1,158 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_card"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.br.desafiohf.CardActivity"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@android:id/tabcontent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/cardImage"
-        android:layout_height="250sp"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_gravity="center_horizontal"
-        tools:background="@color/colorAccent" />
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-    <RelativeLayout
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_card"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ca_name"
-            android:id="@+id/labelCardName"
-            android:textStyle="normal|bold" />
+        <ImageView
+            android:id="@+id/cardImage"
+            android:layout_height="250sp"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            tools:background="@color/cardview_dark_background" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/labelCardName"
-            android:layout_toEndOf="@+id/labelCardName"
-            android:id="@+id/cardName" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ca_name"
+                android:id="@+id/labelCardName"
+                android:textStyle="normal|bold" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/labelCardName"
+                android:layout_toEndOf="@+id/labelCardName"
+                android:id="@+id/cardName" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ca_species"
-            android:id="@+id/labelCardSpecie"
-            android:textStyle="normal|bold" />
+        </RelativeLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/labelCardSpecie"
-            android:layout_toEndOf="@+id/labelCardSpecie"
-            android:id="@+id/cardSpecie" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ca_species"
+                android:id="@+id/labelCardSpecie"
+                android:textStyle="normal|bold" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/labelCardSpecie"
+                android:layout_toEndOf="@+id/labelCardSpecie"
+                android:id="@+id/cardSpecie" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ca_house"
-            android:id="@+id/labelCardHouse"
-            android:textStyle="normal|bold" />
+        </RelativeLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/labelCardHouse"
-            android:layout_toEndOf="@+id/labelCardHouse"
-            android:id="@+id/cardHouse" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ca_house"
+                android:id="@+id/labelCardHouse"
+                android:textStyle="normal|bold" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/labelCardHouse"
+                android:layout_toEndOf="@+id/labelCardHouse"
+                android:id="@+id/cardHouse" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ca_wand_wood"
-            android:id="@+id/labelCardWandWood"
-            android:textStyle="normal|bold" />
+        </RelativeLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/labelCardWandWood"
-            android:layout_toEndOf="@+id/labelCardWandWood"
-            android:id="@+id/cardWandWood" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ca_wand_wood"
+                android:id="@+id/labelCardWandWood"
+                android:textStyle="normal|bold" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/labelCardWandWood"
+                android:layout_toEndOf="@+id/labelCardWandWood"
+                android:id="@+id/cardWandWood" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ca_wand_core"
-            android:id="@+id/labelCardWandCore"
-            android:textStyle="normal|bold" />
+        </RelativeLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/labelCardWandCore"
-            android:layout_toEndOf="@+id/labelCardWandCore"
-            android:id="@+id/cardWandCore" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ca_wand_core"
+                android:id="@+id/labelCardWandCore"
+                android:textStyle="normal|bold" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/labelCardWandCore"
+                android:layout_toEndOf="@+id/labelCardWandCore"
+                android:id="@+id/cardWandCore" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ca_wand_length"
-            android:id="@+id/labelCardLength"
-            android:textStyle="normal|bold" />
+        </RelativeLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/labelCardLength"
-            android:layout_toEndOf="@+id/labelCardLength"
-            android:id="@+id/cardLength" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ca_wand_length"
+                android:id="@+id/labelCardLength"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/labelCardLength"
+                android:layout_toEndOf="@+id/labelCardLength"
+                android:id="@+id/cardLength" />
+
+        </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>
