@@ -6,8 +6,6 @@ import android.view.View;
 
 import com.google.gson.Gson;
 
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 
 public class CardItemListener implements  View.OnClickListener {
