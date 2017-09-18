@@ -55,7 +55,7 @@ public class CardListAdapter extends RecyclerView.Adapter<CardViewHolder> implem
                 if (!charString.isEmpty()) {
                     ArrayList<Card> tmpList = new ArrayList<>();
                     for (Card card : cards) {
-                        if (card.getName().toLowerCase().contains(charString) || card.getName().toLowerCase().contains(charString) || card.getName().toLowerCase().contains(charString)) {
+                        if (card.getName().toLowerCase().contains(charString)) {
                             tmpList.add(card);
                         }
                     }
