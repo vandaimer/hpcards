@@ -2,4 +2,12 @@
     <string name="app_name">DesafioHF</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="card_name">Nome do card</string>
+
+    <string name="ca_name">Nome do card:</string>
+    <string name="ca_species">Espécie:</string>
+    <string name="ca_house">Casa:</string>
+    <string name="ca_wand_wood">Madeira da varinha:</string>
+    <string name="ca_wand_core">Parte da madeira:</string>
+    <string name="ca_wand_length">Tamanho da varinha:</string>
+
 </resources>
