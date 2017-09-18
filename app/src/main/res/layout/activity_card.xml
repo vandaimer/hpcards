@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.br.desafiohf.CardActivity"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -17,4 +17,142 @@
         android:layout_width="match_parent"
         android:layout_gravity="center_horizontal"
         tools:background="@color/colorAccent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ca_name"
+            android:id="@+id/labelCardName"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/labelCardName"
+            android:layout_toEndOf="@+id/labelCardName"
+            android:id="@+id/cardName" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ca_species"
+            android:id="@+id/labelCardSpecie"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/labelCardSpecie"
+            android:layout_toEndOf="@+id/labelCardSpecie"
+            android:id="@+id/cardSpecie" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ca_house"
+            android:id="@+id/labelCardHouse"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/labelCardHouse"
+            android:layout_toEndOf="@+id/labelCardHouse"
+            android:id="@+id/cardHouse" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ca_wand_wood"
+            android:id="@+id/labelCardWandWood"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/labelCardWandWood"
+            android:layout_toEndOf="@+id/labelCardWandWood"
+            android:id="@+id/cardWandWood" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ca_wand_core"
+            android:id="@+id/labelCardWandCore"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/labelCardWandCore"
+            android:layout_toEndOf="@+id/labelCardWandCore"
+            android:id="@+id/cardWandCore" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ca_wand_length"
+            android:id="@+id/labelCardLength"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/labelCardLength"
+            android:layout_toEndOf="@+id/labelCardLength"
+            android:id="@+id/cardLength" />
+
+    </RelativeLayout>
 </LinearLayout>
