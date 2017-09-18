@@ -4,20 +4,25 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 
-public class CardListAdapter extends RecyclerView.Adapter<CardViewHolder> {
+public class CardListAdapter extends RecyclerView.Adapter<CardViewHolder> implements Filterable {
 
     private ArrayList<Card> cards = new ArrayList<>();
-    private  CardItemListener cardItemListener;
+    private ArrayList<Card> filteredList;
+    private CardItemListener cardItemListener;
 
-    public CardListAdapter(ArrayList<Card> cards, CardItemListener cardItemListener) {
+    public CardListAdapter(ArrayList<Card> cards) {
         this.cards = cards;
-        this.cardItemListener = cardItemListener;
+        filteredList = cards;
+        cardItemListener = new CardItemListener(filteredList);
+
     }
 
     @Override
@@ -30,12 +35,44 @@ public class CardListAdapter extends RecyclerView.Adapter<CardViewHolder> {
 
     @Override
     public void onBindViewHolder(CardViewHolder viewHolder, int i) {
-       viewHolder.cardName.setText(cards.get(i).getName());
-       Picasso.with(viewHolder.cardImage.getContext()).load(cards.get(i).getImageURL()).fit().centerCrop().into(viewHolder.cardImage);
+        viewHolder.cardName.setText(filteredList.get(i).getName());
+        Picasso.with(viewHolder.cardImage.getContext()).load(filteredList.get(i).getImageURL()).fit().centerCrop().into(viewHolder.cardImage);
     }
 
     @Override
     public int getItemCount() {
-        return cards.size();
+        return filteredList.size();
+    }
+
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence charSequence) {
+                String charString = charSequence.toString();
+                filteredList = cards;
+
+                if (!charString.isEmpty()) {
+                    ArrayList<Card> tmpList = new ArrayList<>();
+                    for (Card card : cards) {
+                        if (card.getName().toLowerCase().contains(charString) || card.getName().toLowerCase().contains(charString) || card.getName().toLowerCase().contains(charString)) {
+                            tmpList.add(card);
+                        }
+                    }
+                    filteredList = tmpList;
+                }
+
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = filteredList;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults filterResults) {
+                filteredList = (ArrayList<Card>) filterResults.values;
+                cardItemListener.updateCardList(filteredList);
+                notifyDataSetChanged();
+            }
+        };
     }
 }
