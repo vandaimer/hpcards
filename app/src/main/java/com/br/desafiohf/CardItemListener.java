@@ -10,10 +10,10 @@ import java.util.ArrayList;
 
 public class CardItemListener implements  View.OnClickListener {
 
-    private ArrayList<Card> cardsList;
+    private ArrayList<Card> cardList;
 
     public CardItemListener(ArrayList<Card> cardsList) {
-        this.cardsList = cardsList;
+        this.cardList = cardsList;
     }
 
     @Override
@@ -23,7 +23,11 @@ public class CardItemListener implements  View.OnClickListener {
         Gson gsonCard = new Gson();
 
         Intent intent = new Intent(v.getContext(), CardActivity.class);
-        intent.putExtra("CARD", gsonCard.toJson(cardsList.get(itemPosition)));
+        intent.putExtra("CARD", gsonCard.toJson(cardList.get(itemPosition)));
         v.getContext().startActivity(intent);
+    }
+
+    public void updateCardList(ArrayList<Card> cardList) {
+        this.cardList = cardList;
     }
 }
