@@ -2,7 +2,7 @@ package com.br.desafiohf.card;
 
 import java.util.Map;
 
-public class Card {
+public class Card implements Comparable<Card> {
 
     private final String NOT_FOUND = "Não informado";
 
@@ -42,5 +42,11 @@ public class Card {
 
     public Map<String, String> getWand() {
         return wand;
+    }
+
+
+    @Override
+    public int compareTo(Card card) {
+        return name.compareTo(card.getName());
     }
 }

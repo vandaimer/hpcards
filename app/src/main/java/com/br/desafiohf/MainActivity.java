@@ -17,6 +17,7 @@ import com.br.desafiohf.card.Card;
 import com.br.desafiohf.card.CardListAdapter;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import retrofit2.Call;
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 List<Card> resp = response.body();
                 if(!resp.isEmpty()) {
                     cardsList = new ArrayList<>(resp);
+                    Collections.sort(cardsList);
                     cardListAdapter = new CardListAdapter(cardsList);
                     recyclerView.setAdapter(cardListAdapter);
                 }
