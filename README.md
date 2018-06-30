@@ -1,10 +1,10 @@
-# Aplicativo que mostra personagens de Harry Potter
+# The app show the characters of Harry Potter
 
- - Mostra uma lista com informações de personagens utilizando está [API](https://hp-api.herokuapp.com/).
- - Realize uma busca, filtrando os itens da lista pelas informações neles contidas. Ex.: se eu
-buscar Potter, o app deveria me mostrar Harry Potter, James Potter, Lilian Potter...
+ - The API the a list of informations about characters of Harry Potter [API](https://hp-api.herokuapp.com/).
+ - The app need
+    - A search field of characters filtering by informations that each one has.
 
-# Bibliotecas
- - Retrofit - Para realizar requests
- - Gson - Manipular json to class (ou class to json)
- - Picasso - Manipular imagens
+# Libraries
+ - Retrofit - To do requests to API;
+ - Gson - To do parse between JSON and classes;
+ - Picasso - To manipulate images.
